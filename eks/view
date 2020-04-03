@@ -1,0 +1,27 @@
+[root@ip-10-0-1-59 eks]# kubectl config view --minify
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: DATA+OMITTED
+    server: https://65581F1A652C562AE92F5DFA284246DD.gr7.us-east-1.eks.amazonaws.com
+  name: arn:aws:eks:us-east-1:758637906269:cluster/eks-clus-4
+contexts:
+- context:
+    cluster: arn:aws:eks:us-east-1:758637906269:cluster/eks-clus-4
+    user: arn:aws:eks:us-east-1:758637906269:cluster/eks-clus-4
+  name: arn:aws:eks:us-east-1:758637906269:cluster/eks-clus-4
+current-context: arn:aws:eks:us-east-1:758637906269:cluster/eks-clus-4
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:us-east-1:758637906269:cluster/eks-clus-4
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1alpha1
+      args:
+      - token
+      - -i
+      - eks-clus-4
+      command: aws-iam-authenticator
+      env: null
+

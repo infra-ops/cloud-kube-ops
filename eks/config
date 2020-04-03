@@ -1,0 +1,27 @@
+apiVersion: v1
+clusters:
+- cluster:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJd01EUXdNakUyTVRrd01sb1hEVE13TURNek1URTJNVGt3TWxvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBSzUyClhsTGtVelh2T3JLWkdtR1o3MVd3RUNVNVZXcW1SUEJMcW0welhyVndZZlFEMnBSdDVTdnhRUW9ad2xvVEEyK0wKVk5vSFNTVUVlZFZScWRnTmxDemNpZlcrTEdBc1QxMDB3NzhsRURmdUpvbnE5cnA0N2U1d3NGTnZaNmIzREFsUwp3Y01BTkZPNk4xLzYvL0hYa3BWcUIwSzBJei81U0JVSjVKYjFiSG01VXB5dG5yajZlMWV6T1BtdERMdXFPOUJUCm5Mc01XcHU2ck9RSGZybEUxMXB2T3EyODhic2Q4aTUzbDV6SzJ0WWQ3eVFWa0w3V2hBa2dWODJ0ZzdkeG1qMXoKTmp0UHdCR2tZSmU4WU5RTFJaQVIyZExHaEJLRWZCZGQ1cUZ0aG5ZSHpBOFAvdEVEeUNaMFQ4ZUhlOFVRSklaSwpLU045eFBQTW9QbWg3Y2tMWmJjQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFDSUhDNWxxQlEyRG1Nd2dQUldRU1FtQTk1cTQKUnY3T2haVmxad1N3MjVQZkpUS3M1c0YvbWJkRXpuNXRDWHppajNKM0tGalhxME8rWHBQSm9yRTZRK08rZER2UgplTHJDbjhwUjFuUGsrTGVWVFk3V3prd3RHV2ExcmVNTVk1VG9wVzdNbUFGWERmYWJqTUk5ZFRwUDlTeE5IVlFsClcyTmMyQVFuOXkyRkV3V2t3MEhCL1B3MVRyWFNlVGZVQkx6MlVvT2pqMjJlTktSaDkrY3lsOW1aOUlHRmk5cmUKcXBtUEk4KzFOcm1rbkRyekM3MlIya3lBZXhsNUF2blR4bndWT09SVktZVVN5YWkycDVWRmxSUDViZ2xHL3I5RgpKdFp6UllTZFM1bTJYb3JsZjExRE5yWXJJNFFBeFd1Q3B4NDdkTjdoQk43L1JjYW5rUm9jejVKcnFTcz0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    server: https://65581F1A652C562AE92F5DFA284246DD.gr7.us-east-1.eks.amazonaws.com
+  name: arn:aws:eks:us-east-1:758637906269:cluster/eks-clus-4
+contexts:
+- context:
+    cluster: arn:aws:eks:us-east-1:758637906269:cluster/eks-clus-4
+    user: arn:aws:eks:us-east-1:758637906269:cluster/eks-clus-4
+  name: arn:aws:eks:us-east-1:758637906269:cluster/eks-clus-4
+current-context: arn:aws:eks:us-east-1:758637906269:cluster/eks-clus-4
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:us-east-1:758637906269:cluster/eks-clus-4
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1alpha1
+      args:
+      - token
+      - -i
+      - eks-clus-4
+      #- -r
+      #- arn:aws:iam::758637906269:role/e-1
+      command: aws-iam-authenticator
